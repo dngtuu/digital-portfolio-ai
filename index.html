@@ -638,6 +638,58 @@
       object-position: center;
     }
 
+    .prompt-topic-visual {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      align-content: center;
+      gap: 12px;
+      padding: 18px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 50% 28%, rgba(67, 222, 140, 0.25), transparent 34%),
+        linear-gradient(145deg, #031d16, #07402f);
+    }
+
+    .prompt-chip {
+      width: max-content;
+      max-width: 100%;
+      padding: 6px 10px;
+      border: 1px solid rgba(124, 240, 184, 0.45);
+      border-radius: 999px;
+      background: rgba(7, 51, 38, 0.85);
+      color: #bdf7d9;
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .prompt-topic-visual h4 {
+      color: var(--white);
+      font-size: clamp(1rem, 1.7vw, 1.35rem);
+      line-height: 1.25;
+    }
+
+    .prompt-topic-visual p {
+      color: #c8f7df;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    .prompt-flow {
+      display: grid;
+      gap: 7px;
+    }
+
+    .prompt-flow span {
+      padding: 7px 9px;
+      border: 1px solid rgba(124, 240, 184, 0.28);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.08);
+      color: #eafff3;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
     .topic-content {
       padding: 4px 2px 2px;
     }
@@ -1120,6 +1172,20 @@
       .topic-content p {
         font-size: 0.9rem;
       }
+
+      .prompt-topic-visual {
+        padding: 10px;
+        gap: 6px;
+      }
+
+      .prompt-topic-visual h4 {
+        font-size: 0.9rem;
+      }
+
+      .prompt-topic-visual p,
+      .prompt-flow {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -1304,11 +1370,20 @@
 
           <a class="topic-card card reveal" href="#week-3">
             <div class="topic-frame">
-              <img src="3.png" alt="Chủ đề Bài 3 - Viết prompt hiệu quả">
+              <div class="prompt-topic-visual" aria-label="Minh họa prompt cải tiến về AI trong phát hiện xâm nhập mạng">
+                <span class="prompt-chip">Prompt AI - NIDS</span>
+                <h4>Viết prompt hiệu quả cho chủ đề an toàn mạng</h4>
+                <p>Rõ vai trò, bối cảnh, đầu ra và tiêu chí đánh giá để tạo nội dung học tập về AI phát hiện xâm nhập mạng.</p>
+                <div class="prompt-flow">
+                  <span>Vai trò: Giảng viên công nghệ số</span>
+                  <span>Bối cảnh: Sinh viên ngành mạng máy tính</span>
+                  <span>Đầu ra: Infographic NIDS dễ hiểu</span>
+                </div>
+              </div>
             </div>
             <div class="topic-content">
               <h3>Bài 3 - Viết prompt hiệu quả</h3>
-              <p>Bấm để xem prompt ban đầu, prompt cải tiến và minh chứng tuần 3.</p>
+              <p>Bấm để xem prompt ban đầu, prompt cải tiến về NIDS và minh chứng tuần 3.</p>
             </div>
           </a>
 
@@ -1746,6 +1821,7 @@
                     <li>Xác định các tình huống dễ vi phạm học thuật.</li>
                     <li>Xây dựng bộ nguyên tắc cá nhân.</li>
                     <li>Liên hệ bộ nguyên tắc với các tình huống thực tế như làm báo cáo, viết code, tìm tài liệu và tạo nội dung số.</li>
+                    <li>Tự đánh giá mức độ tuân thủ nguyên tắc sau khi hoàn thiện Portfolio và điều chỉnh cách sử dụng AI nếu cần.</li>
                   </ul>
                 </div>
                 <div class="detail-box">
