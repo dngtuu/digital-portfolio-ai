@@ -748,24 +748,57 @@
     }
 
     .gallery-item {
-      display: block;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
       border: 1px solid var(--gray-200);
       border-radius: var(--radius);
       background: var(--white);
       box-shadow: var(--shadow-sm);
     }
 
-    .gallery-item img {
+    .gallery-image {
+      display: grid;
+      place-items: center;
       width: 100%;
       aspect-ratio: 4 / 5;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.25s ease;
+      padding: 8px;
+      background: #06291f;
+      border-radius: var(--radius) var(--radius) 0 0;
+      overflow: hidden;
     }
 
-    .gallery-item:hover img {
-      transform: scale(1.03);
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+
+    .gallery-caption {
+      display: block;
+      min-height: 128px;
+      padding: 14px 14px 18px;
+      border-top: 1px solid var(--gray-100);
+      background: var(--white);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .gallery-caption strong {
+      display: block;
+      color: var(--green-900);
+      font-size: 0.98rem;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .gallery-caption span {
+      display: block;
+      color: var(--gray-500);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      overflow: visible;
     }
 
     .principles {
@@ -1174,12 +1207,20 @@
                 <span class="info-value">Đặng Huy Tú</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Lớp/ngành</span>
-                <span class="info-value">Lớp CN2 - Ngành Mạng máy tính và truyền thông dữ liệu</span>
+                <span class="info-label">Mã sinh viên</span>
+                <span class="info-value">25023527</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Môn học</span>
-                <span class="info-value">Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</span>
+                <span class="info-label">Lớp môn học</span>
+                <span class="info-value">UET.A11</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Ngành</span>
+                <span class="info-value">Mạng máy tính và Truyền thông dữ liệu</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Khóa</span>
+                <span class="info-value">K70</span>
               </div>
             </div>
           </article>
@@ -1543,19 +1584,52 @@
                 </div>
                 <div class="detail-box">
                   <h4>Công cụ sử dụng</h4>
-                  <p>Google Drive, Google Docs, Trello, Notion, Microsoft Teams hoặc công cụ tương đương.</p>
+                  <p>Google Drive để lưu và chia sẻ tài liệu, Google Docs để cùng soạn thảo nội dung, Trello hoặc Notion để lập bảng phân công, Microsoft Teams hoặc Zalo để trao đổi và cập nhật tiến độ.</p>
                 </div>
                 <div class="detail-box">
                   <h4>Quy trình thực hiện</h4>
                   <ul>
-                    <li>Tạo không gian làm việc chung.</li>
-                    <li>Phân công nhiệm vụ theo thành viên.</li>
-                    <li>Cập nhật tiến độ và phản hồi tài liệu.</li>
+                    <li>Tạo thư mục chung trên Google Drive và phân quyền truy cập cho các thành viên.</li>
+                    <li>Lập bảng phân công gồm thành viên, nhiệm vụ, deadline, trạng thái và ghi chú.</li>
+                    <li>Cập nhật trạng thái theo các mức: Chưa làm, Đang làm, Cần góp ý, Hoàn thành.</li>
+                    <li>Trao đổi phản hồi, chỉnh sửa tài liệu chung và tổng hợp sản phẩm cuối cùng.</li>
                   </ul>
                 </div>
                 <div class="detail-box">
                   <h4>Nhận xét hiệu quả</h4>
-                  <p>Công cụ trực tuyến giúp nhóm làm việc minh bạch hơn, giảm trùng lặp và dễ theo dõi trách nhiệm.</p>
+                  <p>Cách làm này giúp nhóm nhìn rõ ai phụ trách phần nào, hạn chế trùng lặp công việc, phát hiện nhiệm vụ chậm tiến độ và lưu lại lịch sử chỉnh sửa để dễ kiểm tra.</p>
+                </div>
+              </div>
+              <div class="full-box">
+                <h4>Mẫu bảng phân công công việc nhóm</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Thành viên</th>
+                        <th>Nhiệm vụ</th>
+                        <th>Deadline</th>
+                        <th>Trạng thái</th>
+                        <th>Ghi chú</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Đặng Huy Tú</td>
+                        <td>Tổng hợp nội dung, thiết kế Portfolio và kiểm tra minh chứng.</td>
+                        <td>Trước ngày nộp bài</td>
+                        <td>Hoàn thành</td>
+                        <td>Đã liên kết PDF và sản phẩm AI vào website.</td>
+                      </tr>
+                      <tr>
+                        <td>Các thành viên còn lại</td>
+                        <td>Thu thập tài liệu, góp ý nội dung và kiểm tra lỗi trình bày.</td>
+                        <td>Theo kế hoạch nhóm</td>
+                        <td>Đang cập nhật</td>
+                        <td>Cập nhật theo nhiệm vụ thực tế trong quá trình làm việc nhóm.</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
               <div class="evidence-action">
@@ -1607,13 +1681,31 @@
                 <h4>Gallery sản phẩm hoàn chỉnh</h4>
                 <div class="gallery">
                   <a class="gallery-item" href="b3285e9b-c690-4e0e-9a40-41a7235eb6dd.png" target="_blank" rel="noopener">
-                    <img src="b3285e9b-c690-4e0e-9a40-41a7235eb6dd.png" alt="Sản phẩm AI tuần 5 - AI trong phát hiện xâm nhập mạng">
+                    <span class="gallery-image">
+                      <img src="b3285e9b-c690-4e0e-9a40-41a7235eb6dd.png" alt="Sản phẩm AI tuần 5 - AI trong phát hiện xâm nhập mạng">
+                    </span>
+                    <span class="gallery-caption">
+                      <strong>Poster NIDS</strong>
+                      <span>Giới thiệu khái niệm, vai trò và lợi ích của AI trong phát hiện xâm nhập mạng.</span>
+                    </span>
                   </a>
                   <a class="gallery-item" href="c72097dd-09fe-422c-8e36-b1f8a2d87b68.png" target="_blank" rel="noopener">
-                    <img src="c72097dd-09fe-422c-8e36-b1f8a2d87b68.png" alt="Sản phẩm AI tuần 5 - Quy trình AI phát hiện tấn công mạng">
+                    <span class="gallery-image">
+                      <img src="c72097dd-09fe-422c-8e36-b1f8a2d87b68.png" alt="Sản phẩm AI tuần 5 - Quy trình AI phát hiện tấn công mạng">
+                    </span>
+                    <span class="gallery-caption">
+                      <strong>Infographic quy trình phát hiện tấn công</strong>
+                      <span>Mô tả các bước từ thu thập dữ liệu mạng đến cảnh báo và phản hồi.</span>
+                    </span>
                   </a>
                   <a class="gallery-item" href="f3f93dc1-0ffb-4a98-9def-31c80c7a887f.png" target="_blank" rel="noopener">
-                    <img src="f3f93dc1-0ffb-4a98-9def-31c80c7a887f.png" alt="Sản phẩm AI tuần 5 - Hệ thống mạng được AI giám sát">
+                    <span class="gallery-image">
+                      <img src="f3f93dc1-0ffb-4a98-9def-31c80c7a887f.png" alt="Sản phẩm AI tuần 5 - Hệ thống mạng được AI giám sát">
+                    </span>
+                    <span class="gallery-caption">
+                      <strong>Hệ thống mạng được AI giám sát</strong>
+                      <span>Minh họa mô hình giám sát, phát hiện bất thường và cảnh báo rủi ro mạng.</span>
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1756,12 +1848,12 @@
             <h3>Bộ file PDF minh chứng</h3>
             <p>Gồm các file minh chứng từ tuần 1 đến tuần 6.</p>
             <div class="pdf-links">
-              <a href="tuan1.pdf" target="_blank" rel="noopener">Tuần 1</a>
-              <a href="tuan2.pdf" target="_blank" rel="noopener">Tuần 2</a>
-              <a href="tuan3.pdf" target="_blank" rel="noopener">Tuần 3</a>
-              <a href="tuan4.pdf" target="_blank" rel="noopener">Tuần 4</a>
-              <a href="tuan5.pdf" target="_blank" rel="noopener">Tuần 5</a>
-              <a href="tuan6.pdf" target="_blank" rel="noopener">Tuần 6</a>
+              <a href="tuan1.pdf" target="_blank" rel="noopener">Tuần 1 - Quản lý tệp</a>
+              <a href="tuan2.pdf" target="_blank" rel="noopener">Tuần 2 - Tìm kiếm học thuật</a>
+              <a href="tuan3.pdf" target="_blank" rel="noopener">Tuần 3 - Prompt AI</a>
+              <a href="tuan4.pdf" target="_blank" rel="noopener">Tuần 4 - Hợp tác trực tuyến</a>
+              <a href="tuan5.pdf" target="_blank" rel="noopener">Tuần 5 - Sản phẩm AI</a>
+              <a href="tuan6.pdf" target="_blank" rel="noopener">Tuần 6 - AI trách nhiệm</a>
             </div>
           </article>
         </div>
@@ -1778,6 +1870,10 @@
       </div>
       <div class="footer-info">
         <span>Họ tên: Đặng Huy Tú</span>
+        <span>Mã sinh viên: 25023527</span>
+        <span>Lớp môn học: UET.A11</span>
+        <span>Ngành: Mạng máy tính và Truyền thông dữ liệu</span>
+        <span>Khóa: K70</span>
         <span>Môn học: Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</span>
         <span>Năm học: 2025-2026</span>
         <span>Email: danghuytu2105@gmail.com</span>
