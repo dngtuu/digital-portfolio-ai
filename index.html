@@ -512,6 +512,26 @@
     .project-list {
       display: grid;
       gap: 24px;
+      padding-top: 26px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .project-detail-head {
+      margin: 0 0 18px;
+      padding: 18px 20px;
+      border: 1px solid rgba(31, 138, 98, 0.14);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--green-100), rgba(234, 245, 255, 0.7));
+    }
+
+    .project-detail-head h3 {
+      color: var(--green-900);
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .project-detail-head p {
+      color: var(--gray-500);
     }
 
     .project-card {
@@ -802,6 +822,11 @@
       gap: 18px;
     }
 
+    .evidence-grid {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+    }
+
     .level {
       display: inline-flex;
       padding: 5px 10px;
@@ -1043,6 +1068,25 @@
         grid-template-columns: 1fr;
         gap: 4px;
       }
+
+      .topic-card {
+        display: grid;
+        grid-template-columns: 108px 1fr;
+        gap: 14px;
+        align-items: center;
+      }
+
+      .topic-frame {
+        margin-bottom: 0;
+      }
+
+      .topic-content {
+        padding: 0;
+      }
+
+      .topic-content p {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -1256,6 +1300,11 @@
               <p>Bấm để xem nguyên tắc cá nhân và minh chứng tuần 6.</p>
             </div>
           </a>
+        </div>
+
+        <div class="project-detail-head reveal">
+          <h3>Chi tiết từng bài tập</h3>
+          <p>Phần dưới đây trình bày đầy đủ mục tiêu, công cụ, quy trình, bài học và minh chứng của từng tuần.</p>
         </div>
 
         <div class="project-list">
@@ -1537,7 +1586,7 @@
                 </div>
                 <div class="detail-box">
                   <h4>Công cụ sử dụng</h4>
-                  <p>[Điền công cụ AI đã sử dụng: ChatGPT, Canva AI, Copilot, Gemini, DALL-E, v.v.]</p>
+                  <p>ChatGPT để xây dựng ý tưởng và nội dung, công cụ tạo ảnh AI để tạo infographic, Canva hoặc trình chỉnh sửa ảnh để hoàn thiện bố cục, màu sắc và chữ trước khi đưa vào Portfolio.</p>
                 </div>
                 <div class="detail-box">
                   <h4>Quy trình thực hiện</h4>
@@ -1684,10 +1733,10 @@
         </article>
 
         <div class="summary-grid">
-          <article class="summary-card card reveal"><h3>Kỹ năng đã học được</h3><p>[Điền thêm các kỹ năng nổi bật như quản lý tài liệu, tìm kiếm nguồn, viết prompt, thiết kế nội dung số.]</p></article>
-          <article class="summary-card card reveal"><h3>Khó khăn đã gặp</h3><p>[Điền khó khăn như sắp xếp minh chứng, chọn nguồn đáng tin cậy, viết nội dung hoặc hoàn thiện giao diện.]</p></article>
-          <article class="summary-card card reveal"><h3>Bài học kinh nghiệm</h3><p>[Điền bài học về quản lý thời gian, làm việc nhóm, kiểm tra thông tin và sử dụng AI có trách nhiệm.]</p></article>
-          <article class="summary-card card reveal"><h3>Định hướng phát triển</h3><p>[Điền định hướng tiếp tục cập nhật Portfolio, cải thiện kỹ năng số và áp dụng AI hiệu quả hơn.]</p></article>
+          <article class="summary-card card reveal"><h3>Kỹ năng đã học được</h3><p>Tôi đã rèn luyện được kỹ năng quản lý tệp và thư mục, tìm kiếm thông tin học thuật, đánh giá nguồn đáng tin cậy, viết prompt rõ ràng, làm việc nhóm trực tuyến và trình bày sản phẩm học tập bằng website Portfolio.</p></article>
+          <article class="summary-card card reveal"><h3>Khó khăn đã gặp</h3><p>Khó khăn chính là sắp xếp minh chứng theo từng tuần, chọn nguồn thông tin phù hợp, diễn đạt nội dung ngắn gọn nhưng đầy đủ và thiết kế giao diện sao cho rõ ràng, dễ xem trên nhiều thiết bị.</p></article>
+          <article class="summary-card card reveal"><h3>Bài học kinh nghiệm</h3><p>Tôi nhận ra cần quản lý thời gian tốt hơn, lưu trữ tài liệu có hệ thống, kiểm chứng thông tin trước khi sử dụng và xem AI là công cụ hỗ trợ học tập chứ không thay thế tư duy cá nhân.</p></article>
+          <article class="summary-card card reveal"><h3>Định hướng phát triển</h3><p>Trong thời gian tới, tôi sẽ tiếp tục cập nhật Portfolio, bổ sung thêm sản phẩm thực hành, cải thiện kỹ năng thiết kế web, nâng cao khả năng sử dụng AI và áp dụng kiến thức mạng máy tính vào các dự án thực tế.</p></article>
         </div>
       </div>
     </section>
@@ -1701,7 +1750,7 @@
         </div>
 
         <div class="evidence-grid">
-          <article class="evidence-card card reveal"><div class="evidence-icon">WWW</div><h3>Link website Portfolio</h3><p>File website: index.html</p><a href="index.html" class="btn btn-outline">Mở website</a></article>
+          <article class="evidence-card card reveal"><div class="evidence-icon">WWW</div><h3>Link website Portfolio</h3><p>https://dngtuu.github.io/digital-portfolio-ai/index.html</p><a href="https://dngtuu.github.io/digital-portfolio-ai/index.html" class="btn btn-outline" target="_blank" rel="noopener">Mở website</a></article>
           <article class="evidence-card card reveal">
             <div class="evidence-icon">PDF</div>
             <h3>Bộ file PDF minh chứng</h3>
@@ -1715,12 +1764,6 @@
               <a href="tuan6.pdf" target="_blank" rel="noopener">Tuần 6</a>
             </div>
           </article>
-          <article class="evidence-card card reveal"><div class="evidence-icon">B1</div><h3>Minh chứng bài 1</h3><p>File PDF: tuan1.pdf</p><a href="tuan1.pdf" class="btn btn-outline" target="_blank" rel="noopener">Mở PDF</a></article>
-          <article class="evidence-card card reveal"><div class="evidence-icon">B2</div><h3>Minh chứng bài 2</h3><p>File PDF: tuan2.pdf</p><a href="tuan2.pdf" class="btn btn-outline" target="_blank" rel="noopener">Mở PDF</a></article>
-          <article class="evidence-card card reveal"><div class="evidence-icon">B3</div><h3>Minh chứng bài 3</h3><p>File PDF: tuan3.pdf</p><a href="tuan3.pdf" class="btn btn-outline" target="_blank" rel="noopener">Mở PDF</a></article>
-          <article class="evidence-card card reveal"><div class="evidence-icon">B4</div><h3>Minh chứng bài 4</h3><p>File PDF: tuan4.pdf</p><a href="tuan4.pdf" class="btn btn-outline" target="_blank" rel="noopener">Mở PDF</a></article>
-          <article class="evidence-card card reveal"><div class="evidence-icon">B5</div><h3>Minh chứng bài 5</h3><p>File PDF: tuan5.pdf</p><a href="tuan5.pdf" class="btn btn-outline" target="_blank" rel="noopener">Mở PDF</a></article>
-          <article class="evidence-card card reveal"><div class="evidence-icon">B6</div><h3>Minh chứng bài 6</h3><p>File PDF: tuan6.pdf</p><a href="tuan6.pdf" class="btn btn-outline" target="_blank" rel="noopener">Mở PDF</a></article>
         </div>
       </div>
     </section>
